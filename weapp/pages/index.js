@@ -1,6 +1,8 @@
 "use strict";
 
-var _core = _interopRequireDefault(require('../vendor.js')(2));
+var _regeneratorRuntime2 = _interopRequireDefault(require('../vendor.js')(3));
+
+var _core = _interopRequireDefault(require('../vendor.js')(0));
 
 var _eventHub = _interopRequireDefault(require('../common/eventHub.js'));
 
@@ -10,7 +12,13 @@ var _store = _interopRequireDefault(require('../store/index.js'));
 
 var _test = _interopRequireDefault(require('../mixins/test.js'));
 
+var _api = _interopRequireDefault(require('../api/index.js'));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -119,24 +127,59 @@ _core["default"].page({
         b: 2
       });
     },
-    request: function request() {
-      var self = this;
-      var i = 10;
-      var map = ['MA==', 'MQo=', 'Mg==', 'Mw==', 'NA==', 'NQ==', 'Ng==', 'Nw==', 'OA==', 'OQ=='];
+    request: function () {
+      var _request = _asyncToGenerator(
+      /*#__PURE__*/
+      _regeneratorRuntime2["default"].mark(function _callee() {
+        var _ref, data, _ref2, data1;
 
-      while (i--) {
-        wx.request({
-          url: 'https://www.madcoder.cn/tests/sleep.php?time=1&t=css&c=' + map[i] + '&i=' + i,
-          success: function success(d) {
-            if (d.statusCode !== 200) {
-              self.netrst += d.statusCode + '.';
-            } else {
-              self.netrst += d.data + '.';
+        return _regeneratorRuntime2["default"].wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return _api["default"].testPost();
+
+              case 2:
+                _ref = _context.sent;
+                data = _ref.data;
+                console.log('data', data);
+                _context.next = 7;
+                return _api["default"].testGet();
+
+              case 7:
+                _ref2 = _context.sent;
+                data1 = _ref2.data1;
+                console.log('data1', data1); // let self = this
+                // let i = 10
+                // let map = ['MA==', 'MQo=', 'Mg==', 'Mw==', 'NA==', 'NQ==', 'Ng==', 'Nw==', 'OA==', 'OQ==']
+                // while (i--) {
+                //   wx.request({
+                //     url: 'https://www.madcoder.cn/tests/sleep.php?time=1&t=css&c=' + map[i] + '&i=' + i,
+                //     success: function(d) {
+                //       if (d.statusCode !== 200) {
+                //         self.netrst += d.statusCode + '.'
+                //       } else {
+                //         self.netrst += d.data + '.'
+                //       }
+                //     }
+                //   })
+                // }
+
+              case 10:
+              case "end":
+                return _context.stop();
             }
           }
-        });
+        }, _callee);
+      }));
+
+      function request() {
+        return _request.apply(this, arguments);
       }
-    },
+
+      return request;
+    }(),
     counterEmit: function counterEmit(num) {
       console.log("".concat(this.$is, " receive event, the number is: ").concat(num));
     }
@@ -154,63 +197,127 @@ _core["default"].page({
       }
     });
   }
-}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"7-15":["index-emit"]}}, handlers: {'7-8': {"tap": function proxy () {
+}, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"5-7":["index-emit"]}}, handlers: {'5-0': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.handleViewTap($event)
       })();
     
-  }},'7-9': {"tap": function proxy () {
+  }},'5-1': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.currentTime = + new Date()
       })();
     
-  }},'7-10': {"tap": function proxy () {
+  }},'5-2': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.mixintap($event)
       })();
     
-  }},'7-11': {"tap": function proxy () {
+  }},'5-3': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.communicate($event)
       })();
     
-  }},'7-12': {"tap": function proxy () {
+  }},'5-4': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.tap($event)
       })();
     
-  }},'7-13': {"tap": function proxy () {
+  }},'5-5': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'7-14': {"tap": function proxy () {
+  }},'5-6': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.mynum++
       })();
     
-  }},'7-15': {"index-emit": function proxy () {
+  }},'5-7': {"index-emit": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.counterEmit($event)
       })();
     
-  }}}, models: {'1': {
+  }}}, models: {'0': {
+      type: "input",
+      expr: "inputmodel",
+      handler: function set ($v) {
+      var _vm=this;
+        _vm.inputmodel = $v;
+      
+    }
+    }} }, {info: {"components":{"list":{"path":"..\\components\\wepy-list"},"group":{"path":"..\\components\\group"},"panel":{"path":"..\\components\\panel"},"counter":{"path":"..\\components\\counter"},"slide-view":{"path":"..\\$vendor\\miniprogram-slide-view\\miniprogram_dist\\index"}},"on":{"5-7":["index-emit"]}}, handlers: {'5-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.handleViewTap($event)
+      })();
+    
+  }},'5-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.currentTime = + new Date()
+      })();
+    
+  }},'5-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.mixintap($event)
+      })();
+    
+  }},'5-3': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.communicate($event)
+      })();
+    
+  }},'5-4': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.tap($event)
+      })();
+    
+  }},'5-5': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'5-6': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.mynum++
+      })();
+    
+  }},'5-7': {"index-emit": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.counterEmit($event)
+      })();
+    
+  }}}, models: {'0': {
       type: "input",
       expr: "inputmodel",
       handler: function set ($v) {

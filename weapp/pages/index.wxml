@@ -16,7 +16,7 @@ module.exports.getTime = getTime;
 <!----------   wxs end   ----------->
 
 <view class="container">
-  <view data-wpy-evt="7-8" bindtap="_proxy" class="userinfo">
+  <view data-wpy-evt="5-0" bindtap="_proxy" class="userinfo">
     <image background-size="cover" src="{{ userInfo.avatarUrl }}" class="userinfo-avatar"></image>
     <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
   </view>
@@ -25,10 +25,10 @@ module.exports.getTime = getTime;
     <view slot="title" class="title">测试数据绑定
     </view>
 
-    <text data-wpy-evt="7-9" bindtap="_proxy" class="info">{{m1.getTime(currentTime)}}
+    <text data-wpy-evt="5-1" bindtap="_proxy" class="info">{{m1.getTime(currentTime)}}
     </text>
     <text class="info">{{setTimeoutTitle}}</text>
-    <text data-wpy-evt="7-10" bindtap="_proxy" class="info">{{mixin}}
+    <text data-wpy-evt="5-2" bindtap="_proxy" class="info">{{mixin}}
     </text>
     <text class="info">{{testcomputed}}</text>
     <text class="info">{{counter}}</text>
@@ -38,9 +38,9 @@ module.exports.getTime = getTime;
     <view slot="title" class="title">其它测试
     </view>
     
-    <button size="mini" data-wpy-evt="7-11" bindtap="_proxy">组件通信
+    <button size="mini" data-wpy-evt="5-3" bindtap="_proxy">组件通信
     </button>
-    <button size="mini" data-wpy-evt="7-12" bindtap="_proxy">混合TAP事件
+    <button size="mini" data-wpy-evt="5-4" bindtap="_proxy">混合TAP事件
     </button>
   </panel>
 
@@ -50,7 +50,7 @@ module.exports.getTime = getTime;
     <view>返回结果:
       <text>{{netrst}}</text>
     </view>
-    <button size="mini" data-wpy-evt="7-13" bindtap="_proxy"> 点我发起10个请求
+    <button size="mini" data-wpy-evt="5-5" bindtap="_proxy"> 点我发起10个请求
     </button>
   </panel>
 
@@ -58,7 +58,7 @@ module.exports.getTime = getTime;
     <view slot="title" class="title">测试 v-model
     </view>
     <view style="display: flex; align-items: center;">
-      <input value="{{ inputmodel }}" bindinput="_proxy" data-model-id="1"></input>
+      <input value="{{ inputmodel }}" bindinput="_proxy" data-model-id="0"></input>
       <text style="margin-left: 30rpx;">Value: {{inputmodel}}</text>
     </view>
   </panel>
@@ -69,14 +69,14 @@ module.exports.getTime = getTime;
 
     <text class="testcounter">全局计数器：</text>
     <view class="counterview">
-      <button size="mini" data-wpy-evt="7-14" bindtap="_proxy">全局计数器: {{mynum}}
+      <button size="mini" data-wpy-evt="5-6" bindtap="_proxy">全局计数器: {{mynum}}
       </button>
     </view>
 
     <text class="testcounter">计数组件1 - num:</text>
     <view class="counterview">
 
-      <counter bind_init="_initComponent" data-wpy-evt="7-15" bindindex-emit="_proxy"></counter>
+      <counter bind_init="_initComponent" data-wpy-evt="5-7" bindindex-emit="_proxy"></counter>
     </view>
 
     <text class="testcounter">计数组件2 - num.sync:</text>
