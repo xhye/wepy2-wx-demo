@@ -1,63 +1,43 @@
-<style lang="less">
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-}
+<style lang='css'>
+@import './styles/weui/work/weui.css';
 </style>
+<!--<style lang="less">-->
+<!--@import './styles/base/index.less';-->
+<!--</style>-->
 
 <script>
-import wepy from '@wepy/core';
-import eventHub from './common/eventHub';
-import vuex from '@wepy/x';
+import wepy from '@wepy/core'
+import eventHub from './common/eventHub'
+import vuex from '@wepy/x'
 
-wepy.use(vuex);
-
+wepy.use(vuex)
 
 wepy.app({
   hooks: {
     // App 级别 hook，对整个 App 生效
     // 同时存在 Page hook 和 App hook 时，优先执行 Page hook，返回值再交由 App hook 处
-    'before-setData': function (dirty) {
-      console.log('setData dirty: ', dirty);
-      return dirty;
+    'before-setData': function(dirty) {
+      console.log('setData dirty: ', dirty)
+      return dirty
     }
   },
   globalData: {
-    userInfo: null
+    userInfo: "abc"
   },
 
-  onLaunch() {
-    this.testAsync();
-    eventHub.$on('app-launch', (...args) => {
-      console.log('app-launch event emitted, the params are:');
-      console.log(args);
-    });
+  onLaunch () {
+    eventHub.$on('app-launch', (...args) => { // 监听事件 触发事件 eventHub.$emit('app-launch', (...args))
+      console.log('app-launch event emitted, the params are:')
+      console.log(args)
+    })
   },
 
-  methods: {
-
-    sleep (s) {
-      return new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve('promise resolved')
-        }, s * 1000)
-      })
-    },
-
-    async testAsync () {
-      let d = await this.sleep(3);
-      console.log(d);
-    }
-  }
-});
+  methods: {}
+})
 </script>
 <config>
-{
-    pages: [
+  {
+    pages: [ // 路由
       'pages/index'
     ],
     window: {
@@ -65,6 +45,29 @@ wepy.app({
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    // 全局组件
+    usingComponents: {},
+    // api权限
+    permission: {
+      'scope.userLocation': {
+        'desc': '你的位置信息将用于小程序位置接口的效果展示'
+      }
+    },
+    subPackages: [ // 分包
+      {
+        'root': 'pagesSub/module1',
+        'name': 'module1',
+        'pages': [
+          'pages/index'
+        ]
+      }
+    ],
+    'preloadRule': { // 分包预加载
+      'pages/index': {
+      'network': 'all',
+      'packages': ['module1']
+      }
     }
-}
+  }
 </config>

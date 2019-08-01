@@ -5,10 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports["default"] = void 0;
 
-var _core = _interopRequireDefault(require('../vendor.js')(0));
+var _http = _interopRequireDefault(require('../utils/http.js'));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var eventHub = new _core["default"]();
-var _default = eventHub;
+var _default = {
+  // 登录
+  getUser: function getUser(params) {
+    return _http["default"].Get("user", {});
+  }
+};
 exports["default"] = _default;
