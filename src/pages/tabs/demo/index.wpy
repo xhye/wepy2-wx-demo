@@ -1,0 +1,57 @@
+<style lang="less">
+.container{
+  height: 100%;
+  width: 100%;
+}
+</style>
+<template>
+  <view class="container">
+    <c-button @tap="request">点我发起10个请求</c-button>
+    <c-button @tap="toDemo('van')">Van组件示例</c-button>
+    <c-button @tap="toDemo('weui')">WeUI示例</c-button>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core'
+import globalMixins from 'Mixins'
+
+wepy.page({
+  hooks: {
+    // Page 级别 hook, 只对当前 Page 的 setData 生效。
+    'before-setData': function(dirty) {
+      return dirty
+    }
+  },
+
+  mixins: [globalMixins],
+
+  data: {},
+
+  computed: {},
+
+  methods: {
+    async request () {
+      const { data } = await wx.api.testPost()
+      console.log('data', data)
+      const { data1 } = await wx.api.testGet()
+      console.log('data1', data1)
+    },
+    toDemo (value) {
+      wx.navigateTo({
+        url: `/pages/tabs/demo/${value}/index`
+      })
+    }
+  },
+
+  created () {}
+})
+</script>
+<config>
+  {
+    navigationBarTitleText: 'WeUI',
+    usingComponents: {
+      'c-button': '~Base/c-button/index'
+    }
+  }
+</config>

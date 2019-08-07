@@ -1,0 +1,59 @@
+<style lang="less">
+.container{
+  height: 100%;
+  width: 100%;
+}
+</style>
+<template>
+  <view class="container">
+    <van-cell-group>
+      <van-cell title="单元格" value="内容" />
+      <van-cell title="单元格" value="内容" label="描述信息" border="{{ false }}" />
+    </van-cell-group>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core'
+import globalMixins from 'Mixins'
+
+wepy.page({
+  hooks: {
+    // Page 级别 hook, 只对当前 Page 的 setData 生效。
+    'before-setData': function(dirty) {
+      if (Math.random() < 0.2) {
+        console.log('setData canceled')
+        // return false // Cancel setData
+      }
+      dirty.time = +new Date()
+      return dirty
+    }
+  },
+
+  mixins: [globalMixins],
+
+  data: {},
+
+  computed: {},
+
+  methods: {
+    async request () {
+      const { data } = await wx.api.testPost()
+      console.log('data', data)
+      const { data1 } = await wx.api.testGet()
+      console.log('data1', data1)
+    }
+  },
+
+  created () {}
+})
+</script>
+<config>
+  {
+    navigationBarTitleText: 'Vant',
+    usingComponents: {
+      'van-cell-group': '~Vant/cell-group/index',
+      'van-cell': '~Vant/cell/index'
+    }
+  }
+</config>

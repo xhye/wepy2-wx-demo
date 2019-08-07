@@ -4,7 +4,7 @@
   "description": "A WePY project",
   "main": "weapp/app.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development ./node_modules/.bin/wepy build --watch",
+    "dev": "cross-env NODE_ENV=development ./node_modules/.bin/wepy build --watch --log trace",
     "build": "cross-env NODE_ENV=production ./node_modules/.bin/wepy build --no-cache",
     "clean": "rm -rf weapp",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,13 +23,13 @@
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "babel-plugin-transform-node-env-inline": "^0.4.3",
     "@babel/preset-env": "^7.1.0",
     "@wepy/babel-plugin-import-regenerator": "0.0.2",
     "@wepy/cli": "^2.0.0-alpha.10",
     "@wepy/compiler-babel": "^2.0.1",
     "@wepy/compiler-less": "^2.0.1",
     "babel-eslint": "^7.2.1",
+    "babel-plugin-transform-node-env-inline": "^0.4.3",
     "cross-env": "^5.1.3",
     "eslint": "^3.18.0",
     "eslint-config-standard": "^7.1.0",

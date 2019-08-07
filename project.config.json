@@ -1,27 +1,31 @@
 {
-  "description": "A WePY project",
-  "setting": {
-    "urlCheck": false,
-    "es6": false,
-    "postcss": false,
-    "minified": false,
-    "newFeature": true,
-    "coverView": true,
-    "autoAudits": false,
-    "checkInvalidKey": true,
-    "checkSiteMap": true,
-    "uploadWithSourceMap": true,
-    "babelSetting": {
-      "ignore": [],
-      "disablePlugins": [],
-      "outputPath": ""
-    }
-  },
-  "compileType": "miniprogram",
-  "appid": "wx09cbb79fdd4ae0c1",
-  "projectname": "wepy2-wx-demo",
-  "miniprogramRoot": "weapp/",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
-  "condition": {}
+	"description": "A WePY project",
+	"setting": {
+		"urlCheck": false,
+		"es6": false,
+		"postcss": false,
+		"minified": false,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"enhance": true
+	},
+	"compileType": "miniprogram",
+	"appid": "wx09cbb79fdd4ae0c1",
+	"projectname": "wepy2-wx-demo",
+	"miniprogramRoot": "weapp/",
+	"simulatorType": "qywx_simulator_plugin",
+	"simulatorPluginLibVersion": {
+		"qywx_simulator_plugin": "1.2.0"
+	},
+	"libVersion": "2.7.7",
+	"condition": {}
 }

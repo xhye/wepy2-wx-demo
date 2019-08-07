@@ -1,5 +1,6 @@
 import { domain } from '../config'
 import Tips from '../utils/tips'
+
 export default class Http {
   static Get(url, { load = true, loadMsg = '加载中...', header = {} }) {
     return request('GET', url, {}, load, loadMsg, header)
@@ -12,7 +13,9 @@ export default class Http {
 
 function request(method, url, params = {}, load, loadMsg, header) {
   // AccessToken数据，如不需要请删除
-  // const userInfo = wepy.$instance.globalData.userInfo
+  const app = getApp()
+  console.log('app', app)
+  console.log('app.$wepy.$app', app.$wepy.$app)
   const finalUrl = !url.startsWith('http') ? domain + url : url
   const finalHeader = {
     'Accept': 'application/json',

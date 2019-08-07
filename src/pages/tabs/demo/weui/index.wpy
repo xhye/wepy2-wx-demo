@@ -1,0 +1,46 @@
+<style lang="less">
+</style>
+<template>
+  <view class="page">
+    <view class="weui-cell">
+      <view class="weui-cell__hd" style="position: relative;">
+        <image src="/images/logo.png" class="img-size50 force-margin-right"/>
+        <view class="weui-badge" style="position: absolute;top: -.4em;right: -.4em;">8</view>
+      </view>
+      <view class="weui-cell__bd">
+        <view>联系人名称</view>
+        <view style="font-size: 13px;color: #888888;">摘要信息</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core'
+import globalMixins from 'Mixins'
+
+wepy.page({
+  hooks: {
+    // Page 级别 hook, 只对当前 Page 的 setData 生效。
+    'before-setData': function(dirty) {
+      return dirty
+    }
+  },
+
+  mixins: [globalMixins],
+
+  data: {},
+
+  computed: {},
+
+  methods: {},
+
+  created () {}
+})
+</script>
+<config>
+  {
+  navigationBarTitleText: 'User',
+  usingComponents: {}
+  }
+</config>

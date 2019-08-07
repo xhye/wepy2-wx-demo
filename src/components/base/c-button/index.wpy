@@ -1,0 +1,63 @@
+<style lang="less" scoped>
+  .c-button {
+    width: 100%;
+    min-height: 98rpx;
+    height: 98rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: transparent;
+    button {
+      max-width: 92%;
+      width: 92%;
+      height: 100%;
+      border-radius: 12rpx;
+      font-size: 36rpx;
+      line-height: 98rpx;
+    }
+  }
+</style>
+<template>
+  <view class="c-button" style="margin-top: {{marginTop}}rpx">
+    <!--@tap="btnClick"-->
+    <button style="background: {{backgroundColor}};color: {{fontColor}}; ">
+      <slot></slot>
+    </button>
+  </view>
+</template>
+<script>
+import wepy from '@wepy/core'
+
+wepy.component({
+  name: 'CButton',
+  props: {
+    backgroundColor: {
+      type: String,
+      default: '#217AED'
+    },
+    fontColor: {
+      type: String,
+      default: '#FFFFFF'
+    },
+    marginTop: {
+      type: Number,
+      default: 80
+    }
+  },
+  computed: {},
+
+  events: {},
+
+  watch: {},
+
+  methods: {
+    /**
+     * 按钮事件，父组件调用的回调
+     */
+    btnClick () {
+      // this.$emit('btnClick')
+    }
+  }
+})
+</script>

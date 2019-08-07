@@ -1,35 +1,56 @@
-<style lang='css'>
-@import './styles/weui/work/weui.css';
-</style>
-<!--<style lang="less">-->
-<!--@import './styles/base/index.less';-->
-<!--</style>-->
-
 <script>
 import wepy from '@wepy/core'
 import eventHub from './common/eventHub'
 import vuex from '@wepy/x'
+import locales from './utils/locales.js'
+import T from './utils/i18n.js'
+import api from './api'
+import utils from './utils'
 
+// 使用vuex
 wepy.use(vuex)
+// 简化事件
+wx.event = eventHub
+// 简化api
+wx.api = api
+// 简化utils
+wx.utils = utils
+// 用 /utils/locales 注册了 locale
+T.registerLocale(locales)
+// 将 T 注册到 wx 之下，这样在任何地方都可以调用 wx.T.getLanguage() 来得到当前的语言对象了。
+wx.T = T
 
 wepy.app({
   hooks: {
     // App 级别 hook，对整个 App 生效
     // 同时存在 Page hook 和 App hook 时，优先执行 Page hook，返回值再交由 App hook 处
     'before-setData': function(dirty) {
-      console.log('setData dirty: ', dirty)
+      console.log('app setData dirty: ', dirty)
       return dirty
+    },
+    // 监控整个app的事件
+    'before-event': function (data) {
+      // console.log(`Its's a ${data.event.type} event, there are ${data.params.length} arguments`)
     }
   },
   globalData: {
-    userInfo: "abc"
+    userInfo: 'abc'
   },
 
   onLaunch () {
-    eventHub.$on('app-launch', (...args) => { // 监听事件 触发事件 eventHub.$emit('app-launch', (...args))
-      console.log('app-launch event emitted, the params are:')
-      console.log(args)
+    // -------------设置语言信息 默认中文---------
+    const locale = 'zh_cn' // 默认语言
+    wx.T.setLocale(locale)
+    wx.setStorageSync('language', locale)
+    // ---------设置语言信息结束-----------
+    // --------监听语言改变事件-----------
+    wx.event.$on('language-change', (locale, _this) => { // 监听事件 触发事件 eventHub.$emit('app-launch', (...args))
+      wx.setStorageSync('language', locale)
+      wx.T.setLocale(locale)
+      _this.language = wx.T.getLanguage()
+      // console.log(`----------切换语言：${locale} -----------`)
     })
+    // --------监听语言切换事件结束-----------
   },
 
   methods: {}
@@ -38,13 +59,36 @@ wepy.app({
 <config>
   {
     pages: [ // 路由
-      'pages/index'
+      'pages/tabs/index/index',
+      'pages/tabs/demo/index',
+      'pages/tabs/demo/van/index',
+      'pages/tabs/demo/weui/index'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      color: '#888888',
+      selectedColor: '#217AED',
+      borderStyle: 'black',
+      backgroundColor: '#FFF',
+      list: [
+        {
+          pagePath: 'pages/tabs/index/index',
+          iconPath: 'images/tabs/ggflfw.png',
+          selectedIconPath: 'images/tabs/ggflfw-selected.png',
+          text: '首页'
+        },
+        {
+          pagePath: 'pages/tabs/demo/index',
+          iconPath: 'images/tabs/ggflfw.png',
+          selectedIconPath: 'images/tabs/ggflfw-selected.png',
+          text: '我的'
+        }
+      ]
     },
     // 全局组件
     usingComponents: {},
@@ -56,18 +100,24 @@ wepy.app({
     },
     subPackages: [ // 分包
       {
-        'root': 'pagesSub/module1',
-        'name': 'module1',
-        'pages': [
-          'pages/index'
-        ]
+      'root': 'pagesSub/module1',
+      'name': 'module1',
+      'pages': [
+        'pages/index'
+      ]
       }
     ],
     'preloadRule': { // 分包预加载
-      'pages/index': {
+      'pages/tabs/index/index': {
       'network': 'all',
       'packages': ['module1']
       }
     }
   }
 </config>
+<style lang="less">
+@import './styles/base/index.less';
+</style>
+<style lang="css">
+@import 'styles/weui/weui.wxss';
+</style>

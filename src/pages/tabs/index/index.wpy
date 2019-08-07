@@ -1,0 +1,43 @@
+<style lang="less">
+</style>
+<template>
+  <div class="container">
+    <div>Value: {{language.language}}</div>
+    <button @tap="changeLanguageHandler('zh_cn')">切换中文</button>
+    <button @tap="changeLanguageHandler('en')">切换英文</button>
+  </div>
+</template>
+
+<script>
+import wepy from '@wepy/core'
+import globalMixins from 'Mixins'
+
+wepy.page({
+  hooks: {
+    // Page 级别 hook, 只对当前 Page 的 setData 生效。
+    'before-setData': function(dirty) {
+      return dirty
+    }
+  },
+
+  mixins: [globalMixins],
+
+  data: {},
+
+  computed: {},
+
+  methods: {
+    changeLanguageHandler (locale) {
+      this.changeLanguage(locale)
+    }
+  },
+
+  created () {}
+})
+</script>
+<config>
+  {
+  navigationBarTitleText: 'WePY 2.0 Feature Demo',
+  usingComponents: {}
+  }
+</config>
