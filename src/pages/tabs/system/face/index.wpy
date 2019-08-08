@@ -1,0 +1,275 @@
+<template>
+  <view class="face">
+    <view class='show-image-item'>
+      <image class='show-image'
+             mode='widthFill'
+             src="../../../images/face/certificate-logo.svg"/>
+    </view>
+    <view class='show-title'>当前业务需要人脸识别验证</view>
+    <view class='show-item'>
+      <van-cell-group border="{{ false }}">
+        <van-field
+        value="{{name === ''?userInfo.realName:name }}"
+          type="text"
+          clearable="true"
+          label="用户名"
+          placeholder="请输入姓名"
+          bind:click-icon="onClickIcon"
+          bindinput="bindNameInput"/>
+        <van-field
+          value="{{hideCardNo}}"
+          type="password"
+          label="身份证"
+          clearable="true"
+          type="text"
+          placeholder="请输入身份证"
+          bindfocus="bindCardNoFocus"
+          bindinput="bindCardNoInput"/>
+      </van-cell-group>
+    </view>
+    <view class='show-select'>
+      <view bindtap='changeSelect'
+            class="show-select-item show-select-item-right {{selectType == 1 ? 'show-select-item-color' : ''}}"
+            data-type="0">反光识别
+      </view>
+      <view bindtap='changeSelect'
+            class="show-select-item {{selectType == 0 ? 'show-select-item-color' : ''}}"
+            data-type="1">读数识别
+      </view>
+    </view>
+    <view class="show-btns">
+      <faceAgreement @changeAgreement.user="setAgreement">
+        <view>我同意广东省服务数据管理局使用我所提交的信息用于快捷登录。</view>
+      </faceAgreement>
+      <face-button @btnClick.user="beginValidate" desc="开始验证" :marginTop="marginTop"></face-button>
+    </view>
+    <view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Api from '../../../api/user'
+import Validate from '@/utils/validate'
+import Agreement from '../../../components/agreement'
+import CButton from '@/components/c-button/index'
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '人脸识别',
+    enablePullDownRefresh: false,
+    disableScroll: true,
+    'usingComponents': {}
+  }
+
+  components = {
+    faceAgreement: Agreement,
+    'face-button': CButton
+  }
+
+  data = {
+    marginTop: 40,
+    selectType: 1,
+    agreement: false,
+    name: '',
+    hideCardNo: '',
+    openId: '',
+    unionId: '',
+    firstFocus: true,
+    userInfo: {}
+  }
+
+  methods = {
+    /**
+     * 同意协议
+     * @author YEQINHUA
+     */
+    setAgreement (value) {
+      this.agreement = value
+    },
+    /**
+     * 开始验证
+     * @author 江振朗
+     */
+    beginValidate() {
+      console.log(123)
+      if (this.check()) {
+        if (!this.agreement) {
+          wx.showToast({
+            title: '请勾选协议',
+            icon: 'none'
+          })
+          return
+        }
+        // this.checkDevice()
+        this.login()
+      }
+    },
+    /**
+     * 点击改变识别类型
+     * @param res
+     * @author 江振朗 2018-10-10
+     */
+    changeSelect(res) {
+      if (res.currentTarget.dataset.type === '0') {
+        this.selectType = 1
+      } else {
+        this.selectType = 0
+      }
+    },
+    bindNameInput(e) {
+      this.name = e.detail.value
+    },
+    bindCardNoFocus() {
+      if (this.firstFocus === true) {
+        this.hideCardNo = ''
+        this.cardNo = ''
+        this.$apply()
+        this.firstFocus = false
+      }
+    },
+    bindCardNoInput(e) {
+      this.cardNo = e.detail.value
+    }
+  }
+
+  onLoad(arg) {
+    this.name = wx.getStorageSync('loginRealName')
+    this.cardNo = wx.getStorageSync('loginCardNo')
+    this.openId = wx.getStorageSync('openId')
+    this.unionId = wx.getStorageSync('unionId')
+    this.userInfo = wx.getStorageSync('userInfo')
+    this.hideCardNo = Validate.hideCertificateCardId(this.cardNo)
+  }
+  onUnload() {
+  }
+  // 显示人脸识别页面
+  onShow() {
+    this.showContainer = true
+  }
+  /**
+   * 检查设备
+   * @author 江振朗 2018-10-10
+   */
+  checkDevice() {
+    var that = this
+    var info = wx.getSystemInfoSync()
+    var version = info.version.split('.')
+    var temp
+    if (that.data.selectType === 1) { // 闪屏
+      temp = [6, 7, 2]
+      that.checkVersion(version, temp)
+    } else { // 读数
+      if (info.system.indexOf('Android') >= 0) {
+        temp = [6, 5, 4]
+        that.checkVersion(version, temp)
+      } else if (info.system.indexOf('iOS') >= 0) {
+        temp = [6, 5, 4]
+        that.checkVersion(version, temp)
+      }
+    }
+  }
+
+  /**
+   * 检查手机微信版本
+   * @param version 当前手机微信版本
+   * @param temp 需要的手机微信版本
+   */
+  checkVersion(version, temp) {
+    let that = this
+    if (version[0] > temp[0] || (Number(version[0]) === Number(temp[0]) && version[1] > temp[1]) ||
+      (Number(version[0]) === Number(temp[0]) && Number(version[1]) === Number(temp[1]) && version[2] > temp[2])) {
+      wx.checkIsSupportFacialRecognition({
+        checkAliveType: that.data.selectType,
+        success(res) {
+          that.checkUserInfo()
+        },
+        fail() {
+          wx.showToast({
+            title: '你的手机不支持人脸识别',
+            icon: 'none'
+          })
+        }
+      })
+    } else {
+      wx.showToast({
+        title: '请将您的手机微信升级到' + temp.join('.') + '以上的版本',
+        icon: 'none'
+      })
+    }
+  }
+
+  /**
+   * 检查登录用户数据
+   * @author 江振朗 2018-10-10
+   */
+  checkUserInfo() {
+    const that = this
+    wx.startFacialRecognitionVerify({
+      name: that.data.name,
+      idCardNumber: that.data.cardNo,
+      checkAliveType: that.data.selectType,
+      success({verifyResult}) {
+        that.login()
+      },
+      fail(res) {}
+    })
+  }
+
+  check () {
+    if (this.name === '') {
+      this.verifyToast('姓名不能为空')
+      return false
+    }
+    if (this.cardNo === '') {
+      this.verifyToast('身份证不能为空')
+      return false
+    } else if (!Validate.chkFormat(this.cardNo, 'idcard')) {
+      this.verifyToast('身份证格式不正确')
+      return false
+    }
+    return true
+  }
+
+  // 弹框提示
+  verifyToast(str) {
+    wx.showToast({
+      title: str,
+      icon: 'none',
+      duration: 2000
+    })
+  }
+
+  /**
+   * 用户登录
+   */
+  async login () {
+    const that = this
+    const params = { realName: that.name, cardNo: that.cardNo, type: 2, openId: this.openId, unionId: this.unionId }
+    const data = await Api.userLogin(params)
+    if (data.code === '00000') {
+      wx.setStorageSync('accessToken', data.data.token.token)
+      wx.setStorageSync('reflashToken', data.data.token.reflashToken)
+      wx.setStorageSync('userInfo', data.data.user)
+      wx.showToast({
+        title: '登录成功',
+        success: function() {
+          wx.reLaunch({
+            url: '/pages/publicLegalServices/index'
+          })
+        }
+      })
+    } else {
+      wx.showToast({
+        title: data.msg,
+        icon: 'none'
+      })
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+@import "./index";
+</style>

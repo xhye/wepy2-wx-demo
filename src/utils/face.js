@@ -41,7 +41,6 @@ export default class Face {
         },
         fail: async res => {
           // 不支持
-          console.log(res)
           Tips.modal('你的手机不支持人脸识别', '提示')
           resolve(false)
         },

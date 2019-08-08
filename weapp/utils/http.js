@@ -69,9 +69,7 @@ function request(method, url) {
   var loadMsg = arguments.length > 4 ? arguments[4] : undefined;
   var header = arguments.length > 5 ? arguments[5] : undefined;
   // AccessToken数据，如不需要请删除
-  var app = getApp();
-  console.log('app', app);
-  console.log('app.$wepy.$app', app.$wepy.$app);
+  console.log('app.$wepy.$options.globalData', getApp().$wepy.$options.globalData);
   var finalUrl = !url.startsWith('http') ? _config.domain + url : url;
 
   var finalHeader = _objectSpread({

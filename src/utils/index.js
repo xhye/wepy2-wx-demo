@@ -6,7 +6,7 @@ import tips from './tips'
  */
 export default class Utils {
   // 日期相关工具类
-  static Date = date
+  static date = date
   // 微信相关Api
-  static Tips = tips
+  static tips = tips
 }

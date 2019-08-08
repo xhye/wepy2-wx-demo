@@ -4,7 +4,7 @@
 export default class DateFmt {
   /**
    * fmt yyyy-MM-dd hh:mm:ss
-   * date Date()
+   * date date()
    * @returns {Promise<any>}
    */
   static fmt (fmt, date, ampm = false) {

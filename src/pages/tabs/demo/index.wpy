@@ -32,9 +32,9 @@ wepy.page({
 
   methods: {
     async request () {
-      const { data } = await wx.api.testPost()
+      const { data } = await wx.$api.testPost()
       console.log('data', data)
-      const { data1 } = await wx.api.testGet()
+      const { data1 } = await wx.$api.testGet()
       console.log('data1', data1)
     },
     toDemo (value) {

@@ -1,8 +1,8 @@
 import http from '../utils/http'
 
-export default {
+export default class User {
   // 登录
-  getUser(params) {
+  test(params) {
     return http.Get(`user`, {})
   }
 }

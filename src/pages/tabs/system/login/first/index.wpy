@@ -1,0 +1,147 @@
+<template>
+  <view class="first_login">
+    <view class="first_login_tips">
+      <!--<tipsInfo title="温馨提示" content="广州微司法行政小程序实名制注册后，可以授权使用人脸识别登录。"></tipsInfo>-->
+    </view>
+    <view class="first_login_form">
+      <view class="login_cell">
+        <view class="first_login_form_title">姓名</view>
+        <input class="first_login_form_input"
+               type="text"
+               placeholder="请输入姓名"
+               placeholder-style="color:#B3B3B3"
+               value="{{realName}}"
+               bindinput="bindNameInput"/>
+      </view>
+      <view class="login_cell">
+        <view class="first_login_form_title">身份证</view>
+        <input class="first_login_form_input"
+               type="idcard"
+               placeholder="请输入身份证"
+               placeholder-style="color:#B3B3B3"
+               value="{{cardNo}}"
+               bindinput="bindCardNoInput"/>
+      </view>
+    </view>
+    <view class="login_cell_ag_btn">
+      <firstLoginAgreement @changeAgreement.user="setAgreement">
+        <view>我同意广州市司法局使用我所提交的信息用于便捷登录。</view>
+        <!--具体查看<span>《用户服务协议》</span>以及<span>《隐私协议》</span>-->
+      </firstLoginAgreement>
+    </view>
+    <view class="login_cell_ag_btn">
+      <first-button @btnClick.user="check" desc="确定" :marginTop="marginTop" ></first-button>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import TipsInfo from '../../../../components/tipsInfo'
+import Agreement from '../../../../components/agreement'
+import Validate from '../../../../utils/validate'
+import Api from '../../../../api/user'
+import CButton from '@/components/c-button/index'
+// import tips from '../../../utils/tips'
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '登录',
+    enablePullDownRefresh: false,
+    disableScroll: true,
+    'usingComponents': {}
+  }
+
+  components = {
+    tipsInfo: TipsInfo,
+    firstLoginAgreement: Agreement,
+    'first-button': CButton
+  }
+
+  data = {
+    marginTop: 40,
+    agreement: false,
+    realName: '',
+    cardNo: ''
+  }
+
+  methods = {
+    /**
+     * 同意协议
+     * @author YEQINHUA
+     */
+    setAgreement (value) {
+      this.agreement = value
+    },
+    check () {
+      if (this.realName === '') {
+        this.verifyToast('姓名不能为空')
+        return false
+      }
+      if (this.cardNo === '') {
+        this.verifyToast('身份证不能为空')
+        return false
+      } else if (!Validate.chkFormat(this.cardNo, 'idcard')) {
+        this.verifyToast('身份证格式不正确')
+        return false
+      }
+      if (this.agreement === false) {
+        this.verifyToast('需同意协议')
+        return false
+      }
+      this.login()
+    },
+    bindNameInput(e) {
+      console.log('this', this)
+      this.realName = e.detail.value
+    },
+    bindCardNoInput(e) {
+      this.cardNo = e.detail.value
+    }
+  }
+
+  async login () {
+    const params = { realName: this.realName, cardNo: this.cardNo }
+    const data = await Api.getUserByRealNameAndCardNo(params)
+    wx.setStorageSync('loginRealName', this.realName)
+    wx.setStorageSync('loginCardNo', this.cardNo)
+    if (data.data != null) {
+      const platform = data.data.registerPlatform
+      if (platform === '广州智慧公证小程序' || platform === '广州智慧调解小程序') {
+        console.log('mobile', data.data.mobile)
+        wx.navigateTo({
+          url: '../haveAnAccount/index?mobile=' + data.data.mobile
+        })
+      } else {
+        wx.navigateTo({
+          url: '../../face/index'
+        })
+      }
+    } else {
+      wepy.navigateTo({
+        url: '../../face/index'
+      })
+    }
+  }
+
+  // 弹框提示
+  verifyToast(str) {
+    wx.showToast({
+      title: str,
+      icon: 'none',
+      duration: 2000
+    })
+  }
+
+  onLoad() {
+    // const userInfo = wx.getStorageSync('userInfo')
+    // this.userInfo = userInfo
+  }
+
+  onUnload() {}
+}
+</script>
+
+<style lang="less" scoped>
+@import "./index";
+</style>

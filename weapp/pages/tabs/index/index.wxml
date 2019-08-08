@@ -1,6 +1,6 @@
 
 <view class="container">
   <view>Value: {{language.language}}</view>
-  <button data-wpy-evt="14-0" bindtap="_proxy">切换中文</button>
-  <button data-wpy-evt="14-1" bindtap="_proxy">切换英文</button>
+  <button data-wpy-evt="18-0" bindtap="_proxy">切换中文</button>
+  <button data-wpy-evt="18-1" bindtap="_proxy">切换英文</button>
 </view>

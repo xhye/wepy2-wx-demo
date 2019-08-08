@@ -16,12 +16,12 @@ var _default = {
      * 改变语言
      */
     changeLanguage: function changeLanguage(locale) {
-      wx.event.$emit('language-change', locale, this);
+      wx.$event.$emit('language-change', locale, this);
     }
   },
   onLoad: function onLoad() {
     // 设置默认语言
-    this.language = wx.T.getLanguage();
+    this.language = wx.$T.getLanguage();
   }
 };
 exports["default"] = _default;

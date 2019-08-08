@@ -9,6 +9,8 @@ var _http = _interopRequireDefault(require('../utils/http.js'));
 
 var _user = _interopRequireDefault(require('user.js'));
 
+var _system = _interopRequireDefault(require('system.js'));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28,6 +30,7 @@ function () {
 
   _createClass(Api, null, [{
     key: "testPost",
+    // 用户相关接口
     // 用户相关接口
     // 测试 post
     value: function testPost(params) {
@@ -49,3 +52,5 @@ function () {
 exports["default"] = Api;
 
 _defineProperty(Api, "user", _user["default"]);
+
+_defineProperty(Api, "system", _system["default"]);

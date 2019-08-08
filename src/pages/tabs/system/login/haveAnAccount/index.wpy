@@ -1,0 +1,230 @@
+<template>
+  <view class="haveAnAccount_login">
+    <view class="haveAnAccount_login_tips">
+      <view>
+        <span>{{realName}}先生/女士，</span>
+        <span>身份证号码{{cardNo}}，已有广州智慧公证/羊城慧调解账号。可使用手机号码获取短信验证。</span>
+      </view>
+    </view>
+    <view class="haveAnAccount_login_form">
+      <view class="login_cell">
+        <van-field value="{{ mobile }}"
+                   type="text"
+                   class="haveAnAccount_login_form_input" center clearable
+                   placeholder="请输入手机号码"
+                   border="{{ true }}" use-button-slot
+                   @change="bindMobileInput"
+        >
+          <view wx:if="canGetCode" class="login_cell_get"
+                slot="button"
+                @tap="sendCode">{{msg}}</view>
+        </van-field>
+      </view>
+      <view class="login_cell">
+        <van-field value="{{ message }}"
+                   type="text"
+                   class="haveAnAccount_login_form_input" center clearable
+                   placeholder="请输入验证码"
+                   border="{{ true }}"
+                   @change="bindMessagesInput"
+        >
+        </van-field>
+      </view>
+    </view>
+    <view class="login_cell_items">
+      <haveAnAccount-login-button @btnClick.user="loginBtn" desc="登录"></haveAnAccount-login-button>
+    </view>
+    <view class="login_cell_items">
+      <haveAnAccount-face-button @btnClick.user="faceLogin" :marginTop="marginTop" desc="使用人脸识别登录"></haveAnAccount-face-button>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+import Validate from '../../../../utils/validate'
+import api from '../../../../api/user'
+import CButton from '@/components/c-button/index'
+// import tips from '../../../utils/tips'
+
+/**
+ * 倒计时秒数
+ */
+let seconds = 120
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '登录',
+    enablePullDownRefresh: false,
+    disableScroll: true,
+    usingComponents: {}
+  }
+
+  components = {
+    'haveAnAccount-login-button': CButton,
+    'haveAnAccount-face-button': CButton
+  }
+
+  data = {
+    marginTop: 20,
+    agreement: false,
+    mobile: '',
+    message: null,
+    realName: null,
+    cardNo: null,
+    msg: '获取验证码',
+    canGetCode: true
+  }
+
+  methods = {
+    /**
+     * 同意协议
+     * @author YEQINHUA
+     */
+    setAgreement (value) {
+      this.agreement = value
+    },
+    /**
+     * 发送验证码
+     */
+    sendCode () {
+      const that = this
+      if (that.canGetCode) {
+        if (that.mobile === '' || that.mobile === undefined) {
+          that.verifyToast('手机号码不能为空')
+          return
+        }
+        this.sendCode()
+      }
+    },
+    loginBtn () {
+      if (this.mobile === '' && this.mobile === undefined) {
+        this.verifyToast('手机号码不能为空')
+        return
+      }
+      if (this.message === '' && this.message === undefined) {
+        this.verifyToast('验证码不能为空')
+        return
+      }
+      this.login()
+    },
+    faceLogin () {
+      wx.navigateTo({
+        url: '/pages/common/face/index'
+      })
+    },
+    bindMobileInput(e) {
+      this.mobile = e.detail
+    },
+    bindMessagesInput(e) {
+      this.message = e.detail
+    }
+  }
+  /**
+   * 发送短信验证码
+   */
+  async sendCode(mobile) {
+    const params = { mobile: this.mobile }
+    const res = await api.sendCode(params)
+    if (res.code === '00000') {
+      this.verifyToast('短信发送成功')
+      this.canGetCode = false
+      this.$apply()
+      this.countDown()
+    } else {
+      this.verifyToast(res.msg)
+    }
+  }
+
+  /**
+   * 发送短信倒计时
+   */
+  countDown() {
+    let that = this
+    setTimeout(function() {
+      console.log(seconds)
+      seconds = seconds - 1
+      that.msg = `倒计时：${seconds}秒`
+      that.$apply()
+      if (seconds > 0) {
+        that.countDown()
+      } else {
+        that.canGetCode = true
+        that.msg = '获取验证码'
+        seconds = 120
+        that.$apply()
+      }
+    }, 1000)
+  }
+
+  onLoad(options) {
+    this.mobile = options.mobile
+    this.realName = wx.getStorageSync('loginRealName')
+    let cardNo = wx.getStorageSync('loginCardNo')
+    if (this.mobile === undefined && this.realName === '' && cardNo === '') {
+      const userInfo = wx.getStorageSync('userInfo')
+      // this.mobile = userInfo.mobile
+      this.realName = userInfo.realName
+      cardNo = userInfo.cardNo
+    }
+    this.cardNo = Validate.hideCertificateCardId(cardNo)
+  }
+
+  onUnload() {
+  }
+
+  // 弹框提示
+  verifyToast(str) {
+    wx.showToast({
+      title: str,
+      icon: 'none',
+      duration: 2000
+    })
+  }
+
+  /**
+   * 用户登录
+   */
+  async login () {
+    const cardNo = wx.getStorageSync('loginCardNo')
+    const openId = wx.getStorageSync('openId')
+    const unionId = wx.getStorageSync('unionId')
+    const params = {
+      username: this.mobile,
+      password: this.message,
+      type: 1,
+      realName: this.realName,
+      cardNo: cardNo,
+      openId: openId,
+      unionId: unionId
+    }
+    const data = await api.userLogin(params)
+    if (data.code === '00000') {
+      wx.setStorageSync('accessToken', data.data.token.token)
+      wx.setStorageSync('reflashToken', data.data.token.reflashToken)
+      wx.setStorageSync('userInfo', data.data.user)
+      wx.showModal({
+        title: '温馨提示',
+        content: '登录成功,跳转到首页',
+        showCancel: false,
+        success (res) {
+          if (res.confirm) {
+            wx.reLaunch({
+              url: '/pages/publicLegalServices/index'
+            })
+          }
+        }
+      })
+    } else {
+      wx.showToast({
+        title: data.msg,
+        icon: 'none'
+      })
+    }
+  }
+}
+</script>
+
+<style lang="less" scoped>
+@import "./index";
+</style>

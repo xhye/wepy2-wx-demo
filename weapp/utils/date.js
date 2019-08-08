@@ -26,7 +26,7 @@ function () {
 
     /**
      * fmt yyyy-MM-dd hh:mm:ss
-     * date Date()
+     * date date()
      * @returns {Promise<any>}
      */
     value: function fmt(_fmt, date) {

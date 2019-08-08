@@ -1,6 +1,6 @@
 "use strict";
 
-var _core = _interopRequireDefault(require('../../../vendor.js')(1));
+var _core = _interopRequireDefault(require('../../../vendor.js')(2));
 
 var _Mixins = _interopRequireDefault(require('../../../mixins/globalMixins.js'));
 
@@ -22,14 +22,42 @@ _core["default"].page({
     }
   },
   created: function created() {}
-}, {info: {"components":{},"on":{}}, handlers: {'14-0': {"tap": function proxy () {
+}, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.changeLanguageHandler('zh_cn')
       })();
     
-  }},'14-1': {"tap": function proxy () {
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {

@@ -1,8 +1,8 @@
 "use strict";
 
-var _regeneratorRuntime2 = _interopRequireDefault(require('../../../vendor.js')(3));
+var _regeneratorRuntime2 = _interopRequireDefault(require('../../../vendor.js')(0));
 
-var _core = _interopRequireDefault(require('../../../vendor.js')(1));
+var _core = _interopRequireDefault(require('../../../vendor.js')(2));
 
 var _Mixins = _interopRequireDefault(require('../../../mixins/globalMixins.js'));
 
@@ -34,14 +34,14 @@ _core["default"].page({
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return wx.api.testPost();
+                return wx.$api.testPost();
 
               case 2:
                 _ref = _context.sent;
                 data = _ref.data;
                 console.log('data', data);
                 _context.next = 7;
-                return wx.api.testGet();
+                return wx.$api.testGet();
 
               case 7:
                 _ref2 = _context.sent;
@@ -69,21 +69,63 @@ _core["default"].page({
     }
   },
   created: function created() {}
-}, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"15-0":["tap"],"15-1":["tap"],"15-2":["tap"]}}, handlers: {'15-0': {"tap": function proxy () {
+}, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'15-1': {"tap": function proxy () {
+  }},'19-1': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('van')
       })();
     
-  }},'15-2': {"tap": function proxy () {
+  }},'19-2': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'19-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'19-2': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'19-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'19-2': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {

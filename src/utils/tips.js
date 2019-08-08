@@ -129,7 +129,7 @@ export default class Tips {
   static loaded() {
     if (Tips.isLoading) {
       Tips.isLoading = false
-      // if (Tips.hideLoading) {
+      // if (tips.hideLoading) {
       wx.hideLoading()
       wx.hideNavigationBarLoading()
       // }

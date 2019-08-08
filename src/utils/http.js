@@ -13,9 +13,7 @@ export default class Http {
 
 function request(method, url, params = {}, load, loadMsg, header) {
   // AccessToken数据，如不需要请删除
-  const app = getApp()
-  console.log('app', app)
-  console.log('app.$wepy.$app', app.$wepy.$app)
+  console.log('app.$wepy.$options.globalData', getApp().$wepy.$options.globalData)
   const finalUrl = !url.startsWith('http') ? domain + url : url
   const finalHeader = {
     'Accept': 'application/json',

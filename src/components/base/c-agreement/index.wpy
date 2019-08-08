@@ -1,0 +1,58 @@
+<template>
+  <view class="agreement">
+    <view class="agreement_content">
+      <van-checkbox wx:if="{{checked}}" class="agreement_content_check" shape="square" value="{{ agreement }}" bind:change="handleChange"></van-checkbox>
+      <view class="agreement_content_text" style="{{checked?'margin-left: 20rpx':''}}">
+        <slot></slot>
+      </view>
+    </view>
+  </view>
+</template>
+
+<script>
+import wepy from '@wepy/core'
+wepy.component({
+  name: 'CAreement',
+  props: {
+    checked: {type: Boolean, default: true}
+  },
+  data: {
+    agreement: false
+  },
+  methods: {
+    /**
+     * 选择
+     * @param event
+     */
+    handleChange (event) {
+      this.agreement = event.detail
+      this.$emit('changeAgreement', this.agreement)
+    }
+  }
+})
+</script>
+
+<style lang="less" scoped>
+.agreement{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rpx;
+  &_content{
+    width: 92%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &_check{
+    }
+    &_text{
+      flex: 1;
+      width: 100%;
+      font-size: 24rpx;
+      color: #999999;
+    }
+  }
+}
+</style>

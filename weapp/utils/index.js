@@ -24,6 +24,6 @@ var Utils = function Utils() {
 
 exports["default"] = Utils;
 
-_defineProperty(Utils, "Date", _date["default"]);
+_defineProperty(Utils, "date", _date["default"]);
 
-_defineProperty(Utils, "Tips", _tips["default"]);
+_defineProperty(Utils, "tips", _tips["default"]);

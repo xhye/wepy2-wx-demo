@@ -169,7 +169,7 @@ function () {
     key: "loaded",
     value: function loaded() {
       if (Tips.isLoading) {
-        Tips.isLoading = false; // if (Tips.hideLoading) {
+        Tips.isLoading = false; // if (tips.hideLoading) {
 
         wx.hideLoading();
         wx.hideNavigationBarLoading(); // }

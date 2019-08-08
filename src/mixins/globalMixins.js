@@ -8,11 +8,11 @@ export default {
      * 改变语言
      */
     changeLanguage(locale) {
-      wx.event.$emit('language-change', locale, this)
+      wx.$event.$emit('language-change', locale, this)
     }
   },
   onLoad() {
     // 设置默认语言
-    this.language = wx.T.getLanguage()
+    this.language = wx.$T.getLanguage()
   }
 }
