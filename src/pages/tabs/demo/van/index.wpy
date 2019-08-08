@@ -44,7 +44,6 @@ wepy.page({
       console.log('data1', data1)
     }
   },
-
   created () {}
 })
 </script>
@@ -52,8 +51,9 @@ wepy.page({
   {
     navigationBarTitleText: 'Vant',
     usingComponents: {
-      'van-cell-group': '~Vant/cell-group/index',
-      'van-cell': '~Vant/cell/index'
+      "van-button": "~Vant/button/index",
+      "van-cell-group": "~Vant/cell-group/index",
+      "van-cell": "~Vant/cell/index"
     }
   }
 </config>

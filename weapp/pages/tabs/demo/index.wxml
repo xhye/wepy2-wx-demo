@@ -1,0 +1,6 @@
+
+<view class="container">
+  <c-button bind_init="_initComponent" data-wpy-evt="15-0" bindtap="_proxy">点我发起10个请求</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="15-1" bindtap="_proxy">Van组件示例</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="15-2" bindtap="_proxy">WeUI示例</c-button>
+</view>

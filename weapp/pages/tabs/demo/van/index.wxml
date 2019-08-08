@@ -1,0 +1,7 @@
+
+<view class="container">
+  <van-cell-group bind_init="_initComponent">
+    <van-cell bind_init="_initComponent" title="单元格" value="内容"></van-cell>
+    <van-cell bind_init="_initComponent" title="单元格" value="内容" label="描述信息" border="{{ false }}"></van-cell>
+  </van-cell-group>
+</view>
