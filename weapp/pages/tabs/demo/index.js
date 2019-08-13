@@ -2,7 +2,7 @@
 
 var _regeneratorRuntime2 = _interopRequireDefault(require('../../../vendor.js')(0));
 
-var _core = _interopRequireDefault(require('../../../vendor.js')(2));
+var _core = _interopRequireDefault(require('../../../vendor.js')(1));
 
 var _Mixins = _interopRequireDefault(require('../../../mixins/globalMixins.js'));
 
@@ -23,6 +23,9 @@ _core["default"].page({
   data: {},
   computed: {},
   methods: {
+    changeLanguageHandler: function changeLanguageHandler(locale) {
+      this.changeLanguage(locale);
+    },
     request: function () {
       var _request = _asyncToGenerator(
       /*#__PURE__*/
@@ -69,63 +72,665 @@ _core["default"].page({
     }
   },
   created: function created() {}
-}, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
+}, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'19-1': {"tap": function proxy () {
+  }},'18-3': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('van')
       })();
     
-  }},'19-2': {"tap": function proxy () {
+  }},'18-4': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('weui')
       })();
     
-  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'19-1': {"tap": function proxy () {
+  }},'18-3': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('van')
       })();
     
-  }},'19-2': {"tap": function proxy () {
+  }},'18-4': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('weui')
       })();
     
-  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"19-0":["tap"],"19-1":["tap"],"19-2":["tap"]}}, handlers: {'19-0': {"tap": function proxy () {
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
     var $event = arguments[arguments.length - 1];
     var _vm=this;
       return (function () {
         _vm.request($event)
       })();
     
-  }},'19-1': {"tap": function proxy () {
+  }},'18-3': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {
         _vm.toDemo('van')
       })();
     
-  }},'19-2': {"tap": function proxy () {
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('weui')
+      })();
+    
+  }}}, models: {} }, {info: {"components":{"c-button":{"path":"..\\..\\..\\components\\base\\c-button\\index"}},"on":{"18-0":["tap"],"18-1":["tap"],"18-2":["tap"],"18-3":["tap"],"18-4":["tap"]}}, handlers: {'18-0': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('zh_cn')
+      })();
+    
+  }},'18-1': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.changeLanguageHandler('en')
+      })();
+    
+  }},'18-2': {"tap": function proxy () {
+    var $event = arguments[arguments.length - 1];
+    var _vm=this;
+      return (function () {
+        _vm.request($event)
+      })();
+    
+  }},'18-3': {"tap": function proxy () {
+    
+    var _vm=this;
+      return (function () {
+        _vm.toDemo('van')
+      })();
+    
+  }},'18-4': {"tap": function proxy () {
     
     var _vm=this;
       return (function () {

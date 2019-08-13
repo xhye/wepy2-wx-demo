@@ -1,6 +1,9 @@
 
 <view class="container">
-  <c-button bind_init="_initComponent" data-wpy-evt="19-0" bindtap="_proxy">点我发起10个请求</c-button>
-  <c-button bind_init="_initComponent" data-wpy-evt="19-1" bindtap="_proxy">Van组件示例</c-button>
-  <c-button bind_init="_initComponent" data-wpy-evt="19-2" bindtap="_proxy">WeUI示例</c-button>
+  <view style="text-align: center;margin-top: 20rpx">Value: {{language.language}}</view>
+  <c-button bind_init="_initComponent" data-wpy-evt="18-0" bindtap="_proxy">切换中文</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="18-1" bindtap="_proxy">切换英文</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="18-2" bindtap="_proxy">点我发起10个请求</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="18-3" bindtap="_proxy">Van组件示例</c-button>
+  <c-button bind_init="_initComponent" data-wpy-evt="18-4" bindtap="_proxy">WeUI示例</c-button>
 </view>

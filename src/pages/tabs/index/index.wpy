@@ -2,9 +2,7 @@
 </style>
 <template>
   <div class="container">
-    <div>Value: {{language.language}}</div>
-    <button @tap="changeLanguageHandler('zh_cn')">切换中文</button>
-    <button @tap="changeLanguageHandler('en')">切换英文</button>
+    <c-grid></c-grid>
   </div>
 </template>
 
@@ -26,18 +24,16 @@ wepy.page({
 
   computed: {},
 
-  methods: {
-    changeLanguageHandler (locale) {
-      this.changeLanguage(locale)
-    }
-  },
+  methods: {},
 
   created () {}
 })
 </script>
 <config>
   {
-  navigationBarTitleText: 'WePY 2.0 Feature Demo',
-  usingComponents: {}
+    navigationBarTitleText: 'WePY 2.0 Feature Demo',
+    usingComponents: {
+      'c-grid': '~Base/c-grid/index'
+    }
   }
 </config>

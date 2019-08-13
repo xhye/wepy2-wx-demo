@@ -1,10 +1,10 @@
 {
     "pages": [
-        "pages/tabs/system/authorize/index",
         "pages/tabs/index/index",
         "pages/tabs/demo/index",
         "pages/tabs/demo/van/index",
-        "pages/tabs/demo/weui/index"
+        "pages/tabs/demo/weui/index",
+        "pages/system/authorize/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -28,7 +28,7 @@
                 "pagePath": "pages/tabs/demo/index",
                 "iconPath": "images/tabs/ggflfw.png",
                 "selectedIconPath": "images/tabs/ggflfw-selected.png",
-                "text": "我的"
+                "text": "Demo"
             }
         ]
     },

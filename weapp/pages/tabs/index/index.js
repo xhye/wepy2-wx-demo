@@ -1,6 +1,6 @@
 "use strict";
 
-var _core = _interopRequireDefault(require('../../../vendor.js')(2));
+var _core = _interopRequireDefault(require('../../../vendor.js')(1));
 
 var _Mixins = _interopRequireDefault(require('../../../mixins/globalMixins.js'));
 
@@ -16,52 +16,6 @@ _core["default"].page({
   mixins: [_Mixins["default"]],
   data: {},
   computed: {},
-  methods: {
-    changeLanguageHandler: function changeLanguageHandler(locale) {
-      this.changeLanguage(locale);
-    }
-  },
+  methods: {},
   created: function created() {}
-}, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('zh_cn')
-      })();
-    
-  }},'18-1': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('en')
-      })();
-    
-  }}}, models: {} }, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('zh_cn')
-      })();
-    
-  }},'18-1': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('en')
-      })();
-    
-  }}}, models: {} }, {info: {"components":{},"on":{}}, handlers: {'18-0': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('zh_cn')
-      })();
-    
-  }},'18-1': {"tap": function proxy () {
-    
-    var _vm=this;
-      return (function () {
-        _vm.changeLanguageHandler('en')
-      })();
-    
-  }}}, models: {} });
+}, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} }, {info: {"components":{"c-grid":{"path":"..\\..\\..\\components\\base\\c-grid\\index"}},"on":{}}, handlers: {}, models: {} });

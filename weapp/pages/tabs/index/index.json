@@ -1,5 +1,7 @@
 {
     "navigationBarTitleText": "WePY 2.0 Feature Demo",
     "component": true,
-    "usingComponents": {}
+    "usingComponents": {
+        "c-grid": "../../../components/base/c-grid/index"
+    }
 }

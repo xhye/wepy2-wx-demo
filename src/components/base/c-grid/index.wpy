@@ -1,0 +1,48 @@
+<style lang="less" scoped>
+.grids{
+  width: 100%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 33.333% 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  &-item{
+    display: inline-grid
+  }
+}
+</style>
+<template>
+  <view class="grids">
+    <view class="grids-item">
+      A
+    </view>
+    <view class="grids-item">
+      B
+    </view>
+    <view class="grids-item">
+      C
+    </view>
+    <view class="grids-item">
+      D
+    </view>
+  </view>
+</template>
+<script>
+import wepy from '@wepy/core'
+
+wepy.component({
+  name: 'CGrid',
+  props: {
+    rowSize: {
+      type: Number,
+      default: 3
+    }
+  },
+  computed: {},
+
+  events: {},
+
+  watch: {},
+
+  methods: {}
+})
+</script>

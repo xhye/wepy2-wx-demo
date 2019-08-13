@@ -6,6 +6,9 @@
 </style>
 <template>
   <view class="container">
+    <div style="text-align: center;margin-top: 20rpx">Value: {{language.language}}</div>
+    <c-button @tap="changeLanguageHandler('zh_cn')">切换中文</c-button>
+    <c-button @tap="changeLanguageHandler('en')">切换英文</c-button>
     <c-button @tap="request">点我发起10个请求</c-button>
     <c-button @tap="toDemo('van')">Van组件示例</c-button>
     <c-button @tap="toDemo('weui')">WeUI示例</c-button>
@@ -31,6 +34,9 @@ wepy.page({
   computed: {},
 
   methods: {
+    changeLanguageHandler (locale) {
+      this.changeLanguage(locale)
+    },
     async request () {
       const { data } = await wx.$api.testPost()
       console.log('data', data)

@@ -13,13 +13,13 @@
       </view>
       <block wx:if="{{ isWechatEnvironment }}">
         <view class="container-button">
-          <button lang="zh_CN" open-type="getUserInfo" data-wpy-evt="17-2" bindgetuserinfo="_proxy">微信授权
+          <button lang="zh_CN" open-type="getUserInfo" data-wpy-evt="17-0" bindgetuserinfo="_proxy">微信授权
           </button>
         </view>
       </block>
       <block wx:else>
         <view class="container-button">
-          <button data-wpy-evt="17-3" bindtap="_proxy">企业微信授权
+          <button data-wpy-evt="17-1" bindtap="_proxy">企业微信授权
           </button>
         </view>
       </block>

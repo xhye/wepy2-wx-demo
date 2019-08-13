@@ -4,6 +4,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports["default"] = void 0;
+
+/**
+ * 全局混合 所有页面、组件都需要引入，用于国际化
+ */
 var _default = {
   data: {
     locale: wx.getStorageSync('language') | 'zh_cn',

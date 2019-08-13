@@ -12,7 +12,7 @@ var _default = {
     'language': '繁體中文'
   },
   'en': {
-    'language': '英文'
+    'language': 'English'
   }
 };
 exports["default"] = _default;
