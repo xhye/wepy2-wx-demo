@@ -1,7 +1,0 @@
-{
-    "navigationBarTitleText": "WeUI",
-    "component": true,
-    "usingComponents": {
-        "c-button": "../../../components/base/c-button/index"
-    }
-}

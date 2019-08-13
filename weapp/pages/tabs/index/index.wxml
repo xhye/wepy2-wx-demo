@@ -1,4 +1,0 @@
-
-<view class="container">
-  <c-grid bind_init="_initComponent"></c-grid>
-</view>

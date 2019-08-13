@@ -1,7 +1,0 @@
-
-<view style="margin-top: {{marginTop}}rpx" class="c-button">
-  
-  <button style="background: {{backgroundColor}};color: {{fontColor}}; ">
-    <slot></slot>
-  </button>
-</view>
