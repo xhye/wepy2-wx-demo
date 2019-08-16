@@ -1,9 +1,15 @@
-<style lang="less">
+<style lang="less" scoped>
+.container{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 </style>
 <template>
-  <div class="container">
-    <c-grid></c-grid>
-  </div>
+  <view class="container">
+    <c-grid :rowSize="3" :grids="grids" @gridClick.user="handelGridClick"></c-grid>
+  </view>
 </template>
 
 <script>
@@ -20,18 +26,32 @@ wepy.page({
 
   mixins: [globalMixins],
 
-  data: {},
+  data: {
+    grids: [
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''},
+      {name: '第一', icon: ''}
+    ]
+  },
 
   computed: {},
 
-  methods: {},
+  methods: {
+    handelGridClick(index) {
+      console.log('handelGridClick index', index)
+    }
+  },
 
   created () {}
 })
 </script>
 <config>
   {
-    navigationBarTitleText: 'WePY 2.0 Feature Demo',
+    navigationBarTitleText: '首页',
     usingComponents: {
       'c-grid': '~Base/c-grid/index'
     }

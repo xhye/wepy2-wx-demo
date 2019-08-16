@@ -38,14 +38,19 @@ wepy.app({
     userInfo: {} // 微信/企业微信用户信息
   },
 
-  async onLaunch () {
+  onLaunch () {
     const locale = 'zh_cn' // 设置语言信息 默认中文
+    // console.log('this', this)
+    // console.log('this.$wx.$wepy.$route', this.$wx.$wepy.$route)
+    // console.log('this.$wx.$wepy.$route.path', this.$wx.$wepy.$route.path)
+    // console.log('this.$route', this.$route)
+    // console.log('this.$route.path', this.$route.path)
     wx.$T.setLocale(locale)
     wx.setStorageSync('language', locale)
-    // --------监听语言改变事件-----------
+    // --------全局唯一监听语言改变事件-----------
     wx.$event.$on('language-change', (locale, _this) => { // 监听事件 触发事件 eventHub.$emit('app-launch', (...args))
       wx.setStorageSync('language', locale)
-      wx.$T.setLocale(locale)
+      wx.$T.setLocale(locale, _this.$is)
       _this.language = wx.$T.getLanguage()
       console.log(`----------切换语言：${locale} -----------`)
     })
@@ -86,7 +91,7 @@ wepy.app({
           pagePath: 'pages/tabs/demo/index',
           iconPath: 'images/tabs/ggflfw.png',
           selectedIconPath: 'images/tabs/ggflfw-selected.png',
-          text: 'Demo'
+          text: '组件示例'
         }
       ]
     },

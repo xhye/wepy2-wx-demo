@@ -1,28 +1,45 @@
 <style lang="less" scoped>
 .grids{
-  width: 100%;
+  flex: 1;
   height: fit-content;
+  margin: 0 20rpx;
   display: grid;
-  grid-template-columns: 33.333% 100px 100px;
-  grid-template-rows: 100px 100px 100px;
+  grid-row-gap: 10rpx;
+  grid-column-gap: 15rpx;
   &-item{
-    display: inline-grid
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    &-icon{
+      width: 65px;
+      height: 65px;
+      border-radius: 5px;
+    }
+    &-label{
+      margin-top: 8px;
+      max-width: 80px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      font-size: 32rpx;
+      height: 32rpx;
+      line-height: 32rpx;
+      color: black;
+    }
   }
 }
 </style>
 <template>
-  <view class="grids">
-    <view class="grids-item">
-      A
-    </view>
-    <view class="grids-item">
-      B
-    </view>
-    <view class="grids-item">
-      C
-    </view>
-    <view class="grids-item">
-      D
+  <view class="grids"
+        style="{{calGrids}}">
+    <view v-for="(item,index) in grids"
+          :key="key"
+          class="grids-item" @click="$emit('gridClick',index,item)">
+      <image class="grids-item-icon" src="/images/logo.png"></image>
+      <view class="grids-item-label">{{item.name}}</view>
     </view>
   </view>
 </template>
@@ -35,14 +52,28 @@ wepy.component({
     rowSize: {
       type: Number,
       default: 3
+    },
+    grids: {
+      type: Array,
+      default: []
     }
   },
-  computed: {},
+  computed: {
+    /**
+     * 计算九宫格行数列数
+     * @returns {string}
+     */
+    calGrids() {
+      return `grid-template-columns: repeat(${this.rowSize},1fr);grid-template-rows: repeat(${parseInt(this.grids.length / this.rowSize) + 1}, 120px);`
+    }
+  },
 
   events: {},
 
   watch: {},
 
-  methods: {}
+  methods: {},
+
+  created() {}
 })
 </script>

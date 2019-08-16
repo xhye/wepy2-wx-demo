@@ -22,7 +22,7 @@
 	"appid": "wx09cbb79fdd4ae0c1",
 	"projectname": "wepy2-wx-demo",
 	"miniprogramRoot": "weapp/",
-	"simulatorType": "qywx_simulator_plugin",
+	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {
 		"qywx_simulator_plugin": "1.2.0"
 	},

@@ -2,39 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b82dfe8-79f0-4cfd-8684-43cd206cacef" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.wpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/base/c-grid/index.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/base/c-grid/index.wpy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mixins/globalMixins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/mixins/globalMixins.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tabs/demo/index.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tabs/demo/index.wpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/tabs/demo/weui/index.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tabs/demo/weui/index.wpy" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/tabs/index/index.wpy" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/tabs/index/index.wpy" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/authorize/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/authorize/index.wpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/face/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/face/index.wpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/login/first/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/login/first/index.wpy" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/login/haveAnAccount/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/tabs/system/login/haveAnAccount/index.wpy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/base/index.less" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base/index.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/i18n.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/locales.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/locales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/common/eventHub.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/common/eventHub.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/components/base/c-button/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/components/base/c-button/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/mixins/globalMixins.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/mixins/globalMixins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/demo/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/demo/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/demo/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/demo/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/demo/van/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/demo/van/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/demo/weui/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/demo/weui/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/index/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/index/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/system/authorize/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/system/authorize/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pages/tabs/system/authorize/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pages/tabs/system/authorize/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/pagesSub/module1/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/pagesSub/module1/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/utils/locales.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/utils/locales.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weapp/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/weapp/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wepy.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/wepy.config.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,21 +28,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/base/c-grid/index.wpy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/src/utils/locales.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+            <state relative-caret-position="756">
+              <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -69,9 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getTime</find>
-      <find>slide</find>
-      <find>handleViewTap</find>
       <find>panel</find>
       <find>babel</find>
       <find>import wepy from 'wepy'</find>
@@ -97,6 +67,11 @@
       <find>isWechatEnvironment</find>
       <find>Api</find>
       <find>environment</find>
+      <find>叶琴华</find>
+      <find>page</find>
+      <find>onLoad</find>
+      <find>$nextTick</find>
+      <find>pages/tabs/index/index</find>
     </findStrings>
     <replaceStrings>
       <replace>wx</replace>
@@ -118,26 +93,20 @@
         <option value="$PROJECT_DIR$/src/styles/weui/work/weui.less" />
         <option value="$PROJECT_DIR$/src/styles/weui/work/weui.css" />
         <option value="$PROJECT_DIR$/src/styles/weui/work/weui.min.css" />
-        <option value="$PROJECT_DIR$/src/utils/i18n.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/utils/test.js" />
         <option value="$PROJECT_DIR$/src/pages/index.wpy" />
         <option value="$PROJECT_DIR$/src/styles/weui/wechat/weui.wxss" />
         <option value="$PROJECT_DIR$/src/styles/weui/work/weui-work.wxss" />
         <option value="$PROJECT_DIR$/src/pages/user.wpy" />
-        <option value="$PROJECT_DIR$/src/styles/base/index.less" />
         <option value="$PROJECT_DIR$/src/components/base/c-button.wpy" />
         <option value="$PROJECT_DIR$/src/pages/demo/van.wpy" />
         <option value="$PROJECT_DIR$/src/pages/tabs/demo/weui/weui.wpy" />
         <option value="$PROJECT_DIR$/src/components/base/c-button/index.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/tabs/demo/weui/index.wpy" />
         <option value="$PROJECT_DIR$/src/components/vant/wxs/utils.wxs" />
         <option value="$PROJECT_DIR$/src/components/vant/wxs/object.wxs" />
         <option value="$PROJECT_DIR$/src/components/vant/wxs/memoize.wxs" />
         <option value="$PROJECT_DIR$/src/components/vant/wxs/bem.wxs" />
         <option value="$PROJECT_DIR$/src/components/vant/wxs/array.wxs" />
-        <option value="$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy" />
-        <option value="$PROJECT_DIR$/wepy.config.js" />
         <option value="$PROJECT_DIR$/src/pagesSub/module1/pages/index.wpy" />
         <option value="$PROJECT_DIR$/src/utils/http.js" />
         <option value="$PROJECT_DIR$/src/api/user.js" />
@@ -151,14 +120,20 @@
         <option value="$PROJECT_DIR$/src/api/system.js" />
         <option value="$PROJECT_DIR$/src/utils/face.js" />
         <option value="$PROJECT_DIR$/src/pages/tabs/system/authorize/index.wpy" />
-        <option value="$PROJECT_DIR$/src/mixins/globalMixins.js" />
-        <option value="$PROJECT_DIR$/src/utils/locales.js" />
-        <option value="$PROJECT_DIR$/src/app.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/tabs/demo/index.wpy" />
         <option value="$PROJECT_DIR$/src/components/base/c-grids/index.wpy" />
-        <option value="$PROJECT_DIR$/src/pages/tabs/index/index.wpy" />
-        <option value="$PROJECT_DIR$/src/components/base/c-grid/index.wpy" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/wepy.config.js" />
+        <option value="$PROJECT_DIR$/src/styles/base/index.less" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/index/index.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/demo/index.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy" />
+        <option value="$PROJECT_DIR$/src/pages/tabs/demo/weui/index.wpy" />
+        <option value="$PROJECT_DIR$/src/mixins/globalMixins.js" />
+        <option value="$PROJECT_DIR$/src/utils/i18n.js" />
+        <option value="$PROJECT_DIR$/src/components/base/c-grid/index.wpy" />
+        <option value="$PROJECT_DIR$/src/app.wpy" />
+        <option value="$PROJECT_DIR$/src/utils/locales.js" />
       </list>
     </option>
   </component>
@@ -174,7 +149,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -182,10 +156,96 @@
               <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
               <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="c-grid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mixins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="van" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="weui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="tabs" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wepy2-wx-demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wepy2-wx-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,22 +260,22 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages" />
-      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs" />
-      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\c-button" />
-      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs\demo\van" />
-      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs\demo\weui" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\c-grids" />
       <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs\system" />
       <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\c-loadmore" />
       <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\C-tipsInfo" />
       <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\c-agreement" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages" />
+      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs" />
+      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\components\base\c-button" />
+      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs\demo\van" />
+      <recent name="D:\Java\wepy2\wepy2-wx-demo\src\pages\tabs\demo\weui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -253,12 +313,14 @@
       <workItem from="1565166084681" duration="28000" />
       <workItem from="1565166581847" duration="8663000" />
       <workItem from="1565573086976" duration="5390000" />
-      <workItem from="1565599441783" duration="7813000" />
+      <workItem from="1565599441783" duration="8004000" />
+      <workItem from="1565684420878" duration="1851000" />
+      <workItem from="1565833523989" duration="30815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99454000" />
+    <option name="totallyTimeSpent" value="132311000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -295,61 +357,10 @@
           <line>67</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/base/c-grid/index.wpy</url>
-          <line>25</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/vant/row/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#style#0;n#view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/area/index.wxml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/picker/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/wxs/utils.wxs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/wxs/object.wxs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/wxs/memoize.wxs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/vant/wxs/array.wxs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/vant/wxs/bem.wxs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -367,13 +378,6 @@
     <entry file="file://$PROJECT_DIR$/weapp/components/vant/cell/index.wxml" />
     <entry file="file://$PROJECT_DIR$/src/components/vant/action-sheet/index.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="30" column="4" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pagesSub/module1/pages/index.wpy">
       <provider selected="true" editor-type-id="text-editor">
@@ -396,13 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/http.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -416,44 +413,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/base/c-nodata/no-data.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-nodata/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-dropdowmmenu/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-tipsInfo/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-agreement/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-loadmore/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -463,20 +422,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-button/index.wpy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="29" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#view#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/i18n.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/utils/face.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -500,34 +445,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/images/error.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/mixins/globalMixins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/locales.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wepy.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="16" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/project.config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/system/face/index.wpy">
       <provider selected="true" editor-type-id="text-editor" />
@@ -561,56 +478,195 @@
     <entry file="file://$PROJECT_DIR$/src/pages/system/face/index.less">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.js" />
+    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.json" />
+    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.wxml" />
+    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.wxss" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package-lock.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wepy.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-agreement/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-222">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-button/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="783">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-dropdowmmenu/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1431">
+          <caret line="49" selection-start-line="49" selection-end-line="49" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-loadmore/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-19">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-tipsInfo/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27">
+          <caret line="14" column="16" lean-forward="true" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-nodata/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/weui/weui.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="35743" selection-start-line="5" selection-start-column="35739" selection-end-line="5" selection-end-column="35743" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/base/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/tabs/demo/index.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="602">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="39" />
+        <state relative-caret-position="548">
+          <caret line="57" column="33" selection-start-line="57" selection-start-column="33" selection-end-line="57" selection-end-column="33" />
           <folding>
             <element signature="n#style#0;n#div#0;n#view#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tabs/demo/van/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="51" column="32" selection-start-line="51" selection-start-column="32" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/tabs/demo/weui/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="602">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/http.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="15" column="55" selection-start-line="15" selection-start-column="46" selection-end-line="15" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weapp/$vendor/@wepy/core/dist/wepy.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1542" column="24" selection-start-line="1542" selection-start-column="24" selection-end-line="1542" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/mixins/globalMixins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/tabs/index/index.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="791">
+          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/base/c-grid/index.wpy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="70" column="13" selection-start-line="70" selection-start-column="13" selection-end-line="70" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app.wpy">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="94" column="12" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+        <state relative-caret-position="594">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
           <folding>
             <element signature="e#9#38#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.wxml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weapp/components/base/c-grid/index.wxss">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/base/c-grid/index.wpy">
+    <entry file="file://$PROJECT_DIR$/src/utils/i18n.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        <state relative-caret-position="135">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/utils/locales.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="5" lean-forward="true" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+        <state relative-caret-position="756">
+          <caret line="28" column="44" lean-forward="true" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
         </state>
       </provider>
     </entry>

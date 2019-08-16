@@ -14,8 +14,10 @@ export default {
       wx.$event.$emit('language-change', locale, this)
     }
   },
-  onLoad() {
+  onLoad() {},
+  onShow() {
     // 设置默认语言
     this.language = wx.$T.getLanguage()
+    wx.$T.setNavigationBarTitle(this.$is)
   }
 }

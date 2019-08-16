@@ -1,4 +1,4 @@
-<style lang="less">
+<style lang="less" scoped>
 </style>
 <template>
   <view class="page">
@@ -40,7 +40,7 @@ wepy.page({
 </script>
 <config>
   {
-  navigationBarTitleText: 'User',
+  navigationBarTitleText: 'WeUI',
   usingComponents: {}
   }
 </config>

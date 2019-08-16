@@ -5,6 +5,9 @@ page {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow: unset;
+  overflow-x: unset;
+  overflow-y: unset;
 }
 
 .img-size50 {
@@ -15,6 +18,7 @@ page {
 
 .force {
   &-margin {
+    margin: 15rpx;
     &-left {
       margin-left: 15rpx;
     }
@@ -24,6 +28,12 @@ page {
   }
   &-padding {
     padding: 15rpx;
+    &-left {
+      padding-left: 15rpx;
+    }
+    &-right {
+      padding-right: 15rpx;
+    }
   }
 }
 

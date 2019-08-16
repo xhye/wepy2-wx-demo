@@ -3,7 +3,7 @@ const prod = process.env.NODE_ENV === 'production'
 
 module.exports = {
   wpyExt: '.wpy',
-  static: ['src/images', 'src/styles', 'src/components/vant'],
+  static: ['src/images', 'src/styles'], // , 'src/components/vant'
   eslint: true,
   cliLogs: !prod,
   build: {},

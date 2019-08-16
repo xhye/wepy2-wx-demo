@@ -1,4 +1,4 @@
-<style lang="less">
+<style lang="less" scoped>
 .container{
   height: 100%;
   width: 100%;
@@ -55,7 +55,7 @@ wepy.page({
 </script>
 <config>
   {
-    navigationBarTitleText: 'WeUI',
+    navigationBarTitleText: '组件示例',
     usingComponents: {
       'c-button': '~Base/c-button/index'
     }
